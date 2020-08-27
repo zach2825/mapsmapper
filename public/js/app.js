@@ -32594,12 +32594,18 @@ __webpack_require__.r(__webpack_exports__);
 var map = {
 	"./Index": [
 		"./resources/js/Pages/Index.vue",
-		0,
-		1
+		0
 	],
 	"./Index.vue": [
 		"./resources/js/Pages/Index.vue",
-		0,
+		0
+	],
+	"./User/Create": [
+		"./resources/js/Pages/User/Create.vue",
+		1
+	],
+	"./User/Create.vue": [
+		"./resources/js/Pages/User/Create.vue",
 		1
 	]
 };
@@ -32613,7 +32619,7 @@ function webpackAsyncContext(req) {
 	}
 
 	var ids = map[req], id = ids[0];
-	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
+	return __webpack_require__.e(ids[1]).then(function() {
 		return __webpack_require__(id);
 	});
 }

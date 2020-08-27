@@ -19,4 +19,4 @@ use Inertia\Inertia;
 
 Route::get('/', 'WelcomeController@index')->name('home');
 
-Route::post('/users', [UsersController::class, 'store']);
+Route::resource('user', 'UsersController');

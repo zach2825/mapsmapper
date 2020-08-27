@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class UsersController extends Controller
 {
@@ -24,7 +25,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('User/Create');
     }
 
     /**
@@ -35,13 +36,13 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-//        User::create(
-//            $request->validate([
-//                'name' => 'required',
-//                'email' => 'email|required|unique:users,email',
-//                'password' => 'confirmed|min:5',
-//            ])
-//        );
+        User::create(
+            $request->validate([
+                'name' => 'required',
+                'email' => 'email|required|unique:users,email',
+                'password' => 'confirmed|min:5',
+            ])
+        );
 
         return redirect('/');
     }
