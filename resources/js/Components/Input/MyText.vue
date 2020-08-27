@@ -1,9 +1,9 @@
 <template>
     <div class="form-group">
-        <label v-if="label" :for="name" v-text="label"/>
-        <input :type="type" class="form-control" name="test" :id="name" :aria-describedby="`_${name}`"
-               :placeholder="label" v-model="fieldValue">
-        <small v-if="help" :id="`_${name}`" class="form-text text-muted" v-text="help"/>
+        <label :for="name" v-if="label" v-text="label"/>
+        <input :aria-describedby="`_${name}`" :id="name" :placeholder="label" :type="type" class="form-control"
+               name="test" v-model="fieldValue">
+        <small :id="`_${name}`" class="form-text text-muted" v-if="help" v-text="help"/>
     </div>
 </template>
 

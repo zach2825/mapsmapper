@@ -20251,10 +20251,10 @@ var render = function() {
           ],
           staticClass: "form-control",
           attrs: {
-            name: "test",
-            id: _vm.name,
             "aria-describedby": "_" + _vm.name,
+            id: _vm.name,
             placeholder: _vm.label,
+            name: "test",
             type: "checkbox"
           },
           domProps: {
@@ -20296,10 +20296,10 @@ var render = function() {
           ],
           staticClass: "form-control",
           attrs: {
-            name: "test",
-            id: _vm.name,
             "aria-describedby": "_" + _vm.name,
+            id: _vm.name,
             placeholder: _vm.label,
+            name: "test",
             type: "radio"
           },
           domProps: { checked: _vm._q(_vm.fieldValue, null) },
@@ -20320,10 +20320,10 @@ var render = function() {
           ],
           staticClass: "form-control",
           attrs: {
-            name: "test",
-            id: _vm.name,
             "aria-describedby": "_" + _vm.name,
+            id: _vm.name,
             placeholder: _vm.label,
+            name: "test",
             type: _vm.type
           },
           domProps: { value: _vm.fieldValue },

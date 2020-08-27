@@ -1,5 +1,6 @@
 import { InertiaApp } from '@inertiajs/inertia-vue'
 import Vue from 'vue'
+
 window._ = require('lodash');
 
 Vue.use(InertiaApp)

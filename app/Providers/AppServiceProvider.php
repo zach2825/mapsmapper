@@ -26,25 +26,25 @@ class AppServiceProvider extends ServiceProvider
         });
 
         Inertia::share([
-            'auth' => function () {
+            'auth'   => function () {
                 return [
                     'user' => Auth::user() ? [
-                        'id' => Auth::user()->id,
-                        'name' => Auth::user()->name,
+                        'id'    => Auth::user()->id,
+                        'name'  => Auth::user()->name,
                         'email' => Auth::user()->email,
                     ] : null,
                 ];
             },
-            'flash' => function () {
+            'flash'  => function () {
                 return [
                     'success' => Session::get('success'),
-                    'error' => Session::get('error'),
+                    'error'   => Session::get('error'),
                 ];
             },
             'errors' => function () {
                 return Session::get('errors')
                     ? Session::get('errors')->getBag('default')->getMessages()
-                    : (object) [];
+                    : (object)[];
             },
         ]);
     }

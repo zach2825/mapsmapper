@@ -1,33 +1,34 @@
 <template>
     <div class="container">
-        This is working {{JSON.stringify(form)}}
+        This is working {{ JSON.stringify(form) }}
         <div>
             Errors:
-            <pre v-html="errors" />
+            <pre v-html="errors"/>
         </div>
         <div v-if="loading">
             Loading . . .
         </div>
         <hr>
-        <form method="post" @submit.prevent="handleFormSubmit">
+        <form @submit.prevent="handleFormSubmit" method="post">
             <div class="row">
                 <div class="col-md-6">
-                    <input-text name="name" v-model="form.name" label="Name" />
+                    <input-text label="Name" name="name" v-model="form.name"/>
                 </div>
                 <div class="col-md-6">
-                    <input-text name="email" v-model="form.email" label="Email" />
+                    <input-text label="Email" name="email" v-model="form.email"/>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <input-text name="password" v-model="form.password" label="Password" type="password" />
+                    <input-text label="Password" name="password" type="password" v-model="form.password"/>
                 </div>
                 <div class="col-md-6">
-                    <input-text name="password_confirmation" v-model="form.password_confirmation" label="Password Confirm" type="password" />
+                    <input-text label="Password Confirm" name="password_confirmation"
+                                type="password" v-model="form.password_confirmation"/>
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary">
+            <button class="btn btn-primary" type="submit">
                 Submit
             </button>
         </form>
@@ -44,7 +45,7 @@ export default {
 
     remember: 'form',
 
-    data(){
+    data() {
         return {
             form: {},
             loading: false,
@@ -52,7 +53,7 @@ export default {
     },
 
     methods: {
-        handleFormSubmit(){
+        handleFormSubmit() {
             this.loading = true;
             this.$inertia.post('/user', this.form)
         }

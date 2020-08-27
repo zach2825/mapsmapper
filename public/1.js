@@ -44,6 +44,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     errors: {
@@ -116,7 +117,7 @@ var render = function() {
             { staticClass: "col-md-6" },
             [
               _c("input-text", {
-                attrs: { name: "name", label: "Name" },
+                attrs: { label: "Name", name: "name" },
                 model: {
                   value: _vm.form.name,
                   callback: function($$v) {
@@ -134,7 +135,7 @@ var render = function() {
             { staticClass: "col-md-6" },
             [
               _c("input-text", {
-                attrs: { name: "email", label: "Email" },
+                attrs: { label: "Email", name: "email" },
                 model: {
                   value: _vm.form.email,
                   callback: function($$v) {
@@ -155,8 +156,8 @@ var render = function() {
             [
               _c("input-text", {
                 attrs: {
-                  name: "password",
                   label: "Password",
+                  name: "password",
                   type: "password"
                 },
                 model: {
@@ -177,8 +178,8 @@ var render = function() {
             [
               _c("input-text", {
                 attrs: {
-                  name: "password_confirmation",
                   label: "Password Confirm",
+                  name: "password_confirmation",
                   type: "password"
                 },
                 model: {
